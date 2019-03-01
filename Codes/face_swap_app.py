@@ -5,7 +5,7 @@ from PIL import ImageTk
 import cv2, time, threading, dlib, os
 from threading import Thread
 import numpy as np
-import faceswap
+from core import faceswap
 
 def select_image1():
     """
@@ -92,7 +92,7 @@ def show_Swap_image(face1, face2):
     global panelC
     ## call to swapping function. It will swap the faces and save the resultant in output.jpg image
     faceswap.FaceSwap(face1,face2)
-    Swaped_image = cv2.imread("output.jpg")
+    Swaped_image = cv2.imread("../output.jpg")
     Swaped_image = cv2.cvtColor(Swaped_image, cv2.COLOR_BGR2RGB)
 
         # convert the images to PIL format...
