@@ -6,6 +6,8 @@ import cv2, time, threading, dlib, os
 from threading import Thread
 import numpy as np
 from core import faceswap
+import warnings
+warnings.filterwarnings("ignore")
 
 def select_image1():
     """
@@ -166,7 +168,7 @@ if __name__ == "__main__":
     btn2.place(x = 525, y = 350, height = 50, width = 150)
     
     ## load arrow image and resize it
-    arrow_image = Image.open("images/arrow.png")
+    arrow_image = Image.open("../images/arrow.png")
     arrow_image = arrow_image.resize((100, 100), Image.ANTIALIAS)
     # convert it into ImageTk format 
     arrow_image = ImageTk.PhotoImage(arrow_image)

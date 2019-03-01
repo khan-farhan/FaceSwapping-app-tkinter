@@ -172,7 +172,7 @@ def FaceSwap(img1,img2):
 
     output_im = im1 * (1.0 - combined_mask) + warped_corrected_im2 * combined_mask
 
-    cv2.imwrite('output.jpg', output_im)
+    cv2.imwrite('../output.jpg', output_im)
 
 
 if __name__ == "__main__":
